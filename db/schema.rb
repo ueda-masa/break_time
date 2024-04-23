@@ -10,34 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_22_084050) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_23_073806) do
   create_table "messages", charset: "utf8", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.text "content"
     t.integer "duration", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "timers", charset: "utf8", force: :cascade do |t|
     t.datetime "start_time", null: false
     t.datetime "end_time", null: false
     t.integer "duration", null: false
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_timers_on_user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "email", null: false
-    t.string "encrypted_password", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "messages", "users"
-  add_foreign_key "timers", "users"
 end

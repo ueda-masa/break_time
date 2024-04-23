@@ -1,0 +1,134 @@
+
+/******************************************************** 
+　ヘッダー
+********************************************************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: 10vh;
+
+  background-color: #DBDBDB;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+
+.navbar{
+  padding: 0 1% 0 0;
+  display: flex;
+  justify-content: flex-end; /* ヘッダーの右端に寄せる */
+}
+
+.header a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo {
+  font-size: 2vw;
+  text-decoration: underline;
+  padding-left: 2vw; 
+}
+
+.nav-lists {
+  font-size: 2vw;
+  display: flex;
+  list-style: none;
+}
+
+.nav-lists__list {
+  margin-left: 10px;
+  font-size:  1.5vw;
+  font-weight: 600;
+  line-height: 100px;  
+}
+
+.grid-6 {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* 要素間の余白を狭くする */
+}
+
+.post {
+  margin-left: 2vw; 
+}
+
+/******************************************************** 
+　トップページ のメイン
+********************************************************/
+.map {
+  position: relative;
+  display: inline-block;
+  width: 100%; 
+  height: auto; 
+}
+
+.text {
+  position: absolute; /* 絶対位置指定 */
+  top: 50%; /* 画像の上端から50%の位置 */
+  left: 50%; /* 画像の左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
+  padding: 10px; /* テキストの周りに余白を設定 */
+}
+
+.date-time{
+  position: absolute; /* 絶対位置指定 */
+  top: 10%; /* 画像の上端から50%の位置 */
+  left: 70%; /* 画像の左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
+  padding: 10px; /* テキストの周りに余白を設定 */
+}
+
+
+.map-itiran {
+  position: relative;
+  width: 100%; 
+  height: auto; 
+}
+
+.map-city {
+  position: relative;
+  display: inline-block;
+  width: 100%; 
+  height: auto; 
+  opacity: 0.5;
+}
+
+.map img {
+  width: 80vw;
+  height: 80vh;
+  max-height: 100%; 
+}
+
+
+
+
+
+/******************************************************** 
+　フッター
+********************************************************/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 5vh;
+
+}
+
+.copyright {
+  font-size: 2vw;
+  color: #444343;
+}
+
+
+
+
+
+
+

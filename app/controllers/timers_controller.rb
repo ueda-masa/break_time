@@ -1,4 +1,4 @@
-class TimerController < ApplicationController
+class TimersController < ApplicationController
 
   def index
     @timers = Timer.all
