@@ -66,37 +66,44 @@
   height: auto; 
 }
 
-.text {
-  position: absolute; /* 絶対位置指定 */
-  top: 50%; /* 画像の上端から50%の位置 */
-  left: 50%; /* 画像の左端から50%の位置 */
-  transform: translate(-50%, -50%); /* 中央揃え */
-  background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
-  padding: 10px; /* テキストの周りに余白を設定 */
-}
-
-.date-time{
-  position: absolute; /* 絶対位置指定 */
-  top: 10%; /* 画像の上端から50%の位置 */
-  left: 70%; /* 画像の左端から50%の位置 */
-  transform: translate(-50%, -50%); /* 中央揃え */
-  background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
-  padding: 10px; /* テキストの周りに余白を設定 */
-}
-
-
-.map-itiran {
-  position: relative;
-  width: 100%; 
-  height: auto; 
-}
-
 .map-city {
-  position: relative;
   display: inline-block;
   width: 100%; 
   height: auto; 
   opacity: 0.5;
+}
+
+.textA {
+  position: absolute; /* 絶対位置指定 */
+  top: 50%; /* 画像の上端から50%の位置 */
+  left: 30%; /* 画像の左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
+  padding: 10px; /* テキストの周りに余白を設定 */
+  opacity: 2;
+  font-size: 4vh;
+}
+
+.textB {
+  position: absolute; /* 絶対位置指定 */
+  top: 20%; /* 画像の上端から50%の位置 */
+  left: 30%; /* 画像の左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
+  padding: 10px; /* テキストの周りに余白を設定 */
+  opacity: 2;
+  font-size: 4vh;
+}
+
+
+
+.date-time{
+  position: absolute; /* 絶対位置指定 */
+  top: 10%; /* 画像の上端から50%の位置 */
+  left: 65%; /* 画像の左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
+  padding: 10px; /* テキストの周りに余白を設定 */
 }
 
 .map img {
@@ -105,8 +112,19 @@
   max-height: 100%; 
 }
 
+#break-settings {
+  position: absolute; /* 絶対位置指定 */
+  top: 50%; /* 画面の上端から50%の位置 */
+  left: 30%; /* 画面の左端から50%の位置 */
+  transform: translate(-50%, -50%); /* 中央揃え */
+  display: flex; /* 子要素をフレックスボックスとして配置 */
+  flex-direction: column; /* 子要素を縦に並べる */
+}
 
-
+.break-time-form {
+  font-size: 3vh;
+  background-color: #f0e9e9;
+}
 
 
 /******************************************************** 

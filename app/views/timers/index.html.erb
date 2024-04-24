@@ -12,11 +12,10 @@
     <div class="map">
       <div class="map-city">
         <%= image_tag("top.jpg", alt: "Map Image") %>
-        <div class="text"><a href="seting.html">時刻設定</a></div>
-                <!-- 日付と時間を表示 -->
-        <div class="date-time" id="datetime">
-          <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M") %>
-        </div>
+      </div>
+      <div class="textA"><a href="/">まずは新規登録、ログインをしてアプリを使用してください</a></div>
+      <div class="date-time" id="datetime">
+        <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M") %>
       </div>
     </div>
   </body>

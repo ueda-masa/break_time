@@ -1,0 +1,15 @@
+<!-- app/views/timers/stop.html.erb -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stop Break</title>
+</head>
+<body>
+  <h1>Break Time is Over</h1>
+  <p>Please input the password to stop the break:</p>
+  <%= form_with url: stop_break_path, method: :post do |form| %>
+    <%= form.text_field :password %>
+    <%= form.submit "Stop Break" %>
+  <% end %>
+</body>
+</html>
