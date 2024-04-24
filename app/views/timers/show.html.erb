@@ -22,8 +22,17 @@
   <%= javascript_pack_tag 'popup' %>
 </head>
 <body>
-  <h1>Timer Details</h1>
-  <%= @timer.name %>
+      <div class="map">
+      <div class="map-city">
+        <%= image_tag("top.jpg", alt: "Map Image") %>
+        <a href="<%= root_path %>">時刻設定</a>
+                <!-- 日付と時間を表示 -->
+        <div class="date-time" id="datetime">
+          <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M") %>
+        </div>
+      </div>
+       <h1>Timer Details</h1>
+       <%= @timer.name %>
   <!-- ここにタイマーの詳細情報を表示するコードを追加 -->
 </body>
 </html>

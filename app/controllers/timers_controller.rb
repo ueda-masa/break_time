@@ -3,11 +3,33 @@ class TimersController < ApplicationController
     @timers = Timer.all
   end
 
+  def new
+    @timers = Timer.new
+  end
+
+  def create
+    Timer.create(timer_params)
+    redirect_to '/'
+  end
+
+  def destroy
+    timer = Timer.find(params[:id])
+    timer.destroy
+    redirect_to root_path
+  end
+
+  def edit
+    @timer = Timer.find(params[:id])
+  end
+
+  def update
+    timer = Timer.find(params[:id])
+    timer.update(timer_params)
+    redirect_to root_path
+  end
+  
+
   def show
     @timer = Timer.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    # タイマーが見つからない場合の処理
-    flash[:alert] = "Timer not found."
-    redirect_to root_path
   end
 end

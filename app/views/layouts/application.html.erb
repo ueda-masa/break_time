@@ -19,7 +19,7 @@
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
              <div class="nav-lists__list"><%= current_user.name %></div>
-            <div class="nav-lists__list"><%= link_to "タイマー設定", show_path %></div>
+            <div class="nav-lists__list"><%= link_to "タイマー設定", "seting.html" %></div>
             <div class="nav-lists__list"><%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %></div>
           </div>
         <% else %>

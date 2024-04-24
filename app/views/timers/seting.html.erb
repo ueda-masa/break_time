@@ -1,23 +1,21 @@
+
 <!DOCTYPE HTML>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>休憩タイマーアプリ</title>
+    <title>  設定  </title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <script src="timertop.js" defer></script>
   </head>
   <body>
-    <!-- ヘッダー -->
-    <!-- トップページのメイン -->
     <div class="map">
       <div class="map-city">
         <%= image_tag("top.jpg", alt: "Map Image") %>
-        <div class="text"><a href="seting.html">時刻設定</a></div>
+        <a href="<%= root_path %>">時刻設定</a>
                 <!-- 日付と時間を表示 -->
         <div class="date-time" id="datetime">
           <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M") %>
         </div>
       </div>
-    </div>
+
   </body>
 </html>
