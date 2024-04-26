@@ -5,13 +5,11 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 80vw;
-  height: 10vh;
-
+  width: 1366px;
+  padding: 0 100px 0 30px;
   background-color: #DBDBDB;
-  margin-left: 0;
-  margin-right: 0;
+  text-decoration: none;
+  color: #000000;
 }
 
 
@@ -28,22 +26,21 @@
 }
 
 .logo {
-  font-size: 2vw;
-  text-decoration: underline;
-  padding-left: 2vw; 
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 100px; 
 }
 
 .nav-lists {
-  font-size: 2vw;
+  height: 100px;
   display: flex;
-  list-style: none;
 }
 
 .nav-lists__list {
-  margin-left: 10px;
-  font-size:  1.5vw;
+  margin-left: 70px;
+  font-size: 22px;
   font-weight: 600;
-  line-height: 100px;  
+  line-height: 100px;   
 }
 
 .grid-6 {
@@ -53,7 +50,7 @@
 }
 
 .post {
-  margin-left: 2vw; 
+  margin-left: 20px; 
 }
 
 /******************************************************** 
@@ -61,87 +58,77 @@
 ********************************************************/
 .map {
   position: relative;
-  display: inline-block;
-  width: 100%; 
-  height: auto; 
+
+}
+
+.map img {
+  width: 1495px;
+  height: 1000px;
 }
 
 .map-city {
   display: inline-block;
-  width: 100%; 
-  height: auto; 
   opacity: 0.5;
+}
+
+.map-city {
+  display: inline-block;
+  opacity: 1;
+}
+
+.map-city img {
+  width: 1495px;
+  height: 1000px;
 }
 
 .textA {
   position: absolute; /* 絶対位置指定 */
-  top: 50%; /* 画像の上端から50%の位置 */
-  left: 30%; /* 画像の左端から50%の位置 */
+  top: 800px; /* 画像の上端から50%の位置 */
+  left: 800px; /* 画像の左端から50%の位置 */
   transform: translate(-50%, -50%); /* 中央揃え */
   background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
   padding: 10px; /* テキストの周りに余白を設定 */
   opacity: 2;
-  font-size: 4vh;
+  font-size: 30px;
 }
 
 .textB {
   position: absolute; /* 絶対位置指定 */
-  top: 20%; /* 画像の上端から50%の位置 */
-  left: 30%; /* 画像の左端から50%の位置 */
+  top: 100px; /* 画像の上端から50%の位置 */
+  left: 700px; /* 画像の左端から50%の位置 */
   transform: translate(-50%, -50%); /* 中央揃え */
   background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
   padding: 10px; /* テキストの周りに余白を設定 */
   opacity: 2;
-  font-size: 4vh;
+  font-size: 30px;
 }
 
 
 
 .date-time{
   position: absolute; /* 絶対位置指定 */
-  top: 10%; /* 画像の上端から50%の位置 */
-  left: 65%; /* 画像の左端から50%の位置 */
+  top: 70px; /* 画像の上端から50%の位置 */
+  left: 1250px; /* 画像の左端から50%の位置 */
   transform: translate(-50%, -50%); /* 中央揃え */
   background-color: rgba(255, 255, 255, 0.5); /* 背景色 */
   padding: 10px; /* テキストの周りに余白を設定 */
+  font-size: 25px;
 }
 
-.map img {
-  width: 80vw;
-  height: 80vh;
-  max-height: 100%; 
-}
+
 
 #break-settings {
   position: absolute; /* 絶対位置指定 */
-  top: 50%; /* 画面の上端から50%の位置 */
-  left: 30%; /* 画面の左端から50%の位置 */
+  top: 300px; /* 画面の上端から50%の位置 */
+  left: 700px; /* 画面の左端から50%の位置 */
   transform: translate(-50%, -50%); /* 中央揃え */
   display: flex; /* 子要素をフレックスボックスとして配置 */
   flex-direction: column; /* 子要素を縦に並べる */
 }
 
 .break-time-form {
-  font-size: 3vh;
+  font-size: 20px;
   background-color: #f0e9e9;
-}
-
-
-/******************************************************** 
-　フッター
-********************************************************/
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  height: 5vh;
-
-}
-
-.copyright {
-  font-size: 2vw;
-  color: #444343;
 }
 
 

@@ -1,10 +1,12 @@
+<!-- app/views/timers/index.html.erb -->
 <!DOCTYPE HTML>
 <html>
   <head>
     <meta charset="UTF-8">
     <title>休憩タイマーアプリ</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <script src="timertop.js" defer></script>
+    <%= javascript_include_tag 'timeup', 'data-turbolinks-track': 'reload' %>
+
   </head>
   <body>
     <!-- ヘッダー -->
@@ -15,7 +17,7 @@
       </div>
       <div class="textA"><a href="/">まずは新規登録、ログインをしてアプリを使用してください</a></div>
       <div class="date-time" id="datetime">
-        <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M") %>
+        <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M:%S") %>
       </div>
     </div>
   </body>

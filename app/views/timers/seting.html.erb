@@ -5,7 +5,13 @@
   <meta charset="UTF-8">
   <title>設定</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'timers', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'timeup', 'data-turbolinks-track': 'reload' %>
+  <script>
+    // フォームをリセットする関数
+    function resetForm() {
+      document.getElementById("form_id").reset();
+    }
+  </script>
 </head>
 <body>
   <div class="map">
@@ -14,23 +20,23 @@
       <!-- 日付と時間を表示 -->
     </div>
     <div class="date-time" id="datetime">
-      <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M") %>
+      <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M:%S") %>
     </div>
     <div class="textB">時刻設定</div>
     <div id="break-settings">
       <!-- 休憩時間設定フォーム -->
-      <form action="/process_time_settings" method="post">
+      <%= form_with(url: process_time_settings_path, method: :post, id: "form_id") do |form| %>
         <% (1..6).each do |i| %>
           <div class="break-time-form">
             <label for="start_time_<%= i %>">休憩時間設定<%= i %></label>
-            <input type="time" id="start_time_<%= i %>" name="start_time_<%= i %>">
+            <%= form.time_field "start_time_#{i}" %>
             <span>～</span>
-            <input type="time" id="end_time_<%= i %>" name="end_time_<%= i %>">
+            <%= form.time_field "end_time_#{i}" %>
           </div>
         <% end %>
-        <button type="submit">確定</button>
-        <button type="reset">リセット</button>
-      </form>
+        <%= form.submit "確定" %>
+        <button type="button" onclick="resetForm()">リセット</button>
+      <% end %>
     </div>
   </div>
 </body>

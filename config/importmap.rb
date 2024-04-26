@@ -1,3 +1,4 @@
+# app/config/importmap.rb
 # Pin npm packages by running ./bin/importmap
 
 pin "application"
@@ -6,5 +7,5 @@ pin "@hotwired/stimulus", to: "stimulus.min.js"
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "timertop", to: "timertop.js"
-pin "popup", to: "popup.js"
-pin "timers", to: "timers.js"
+
+pin "timeup", to: "timeup.js"

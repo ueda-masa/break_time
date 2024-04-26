@@ -2,14 +2,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stop Break</title>
-</head>
-<body>
-  <h1>Break Time is Over</h1>
-  <p>Please input the password to stop the break:</p>
-  <%= form_with url: stop_break_path, method: :post do |form| %>
-    <%= form.text_field :password %>
-    <%= form.submit "Stop Break" %>
-  <% end %>
-</body>
+  <title>休憩時間です！休憩はしっかりとりましょう！！</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <!-- トップページのメイン -->
+    <div class="map">
+      <div class="map-citys">
+        <% random_image_number = rand(1..15) %> <!-- 1から15のランダムな数を生成 -->
+        <%= image_tag("during/#{random_image_number}.jpg", alt: "Random Image") %>
+      </div>
+      <div class="textA"><a href="/">休憩時間です！休憩はしっかりとりましょう！！</a></div>
+      <div class="date-time" id="datetime">
+        <%= Time.now.strftime("%Y年%m月%d日（%A） %H:%M:%S") %>
+      </div>
+    </div>
+  </body>
 </html>
+
+
+
+

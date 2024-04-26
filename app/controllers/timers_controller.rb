@@ -32,4 +32,10 @@ class TimersController < ApplicationController
   def show
     @timer = Timer.find(params[:id])
   end
+
+  def process_time_settings
+    # フォームから送信されたデータを処理するロジックをここに追加します
+  end
+
+
 end
